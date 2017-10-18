@@ -8,4 +8,4 @@ sudo nvidia-settings -a GPUGraphicsClockOffset[3]=86
 sudo nvidia-settings -a GPUMemoryTransferRateOffset[3]=608
 
 sudo nvidia-smi -pm 1
-sudo nvidia-smi -pl 280
+sudo nvidia-smi -pl 250
