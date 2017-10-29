@@ -19,7 +19,13 @@ socket.on('disconnect', function() {
 
 function myFunc(arg) {
 	request({ url: 'http://127.0.0.1:42000/getstat', method: 'GET'}, function(err, res, data) {
-		var obj = JSON.parse(data);
-		socket.emit('talk', 'may1', obj);
+		if(typeof data != "undefined"){
+			var obj = JSON.parse(data);
+			obj.status = "connected";
+			socket.emit('talk', 'may1', obj);
+		}else{
+			socket.emit('talk', 'may1', { status: "disconnected" } );
+		}
+
 	});
 }
