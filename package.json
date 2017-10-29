@@ -1,0 +1,12 @@
+{
+	"name": "Client",
+	"version": "1.0.0",
+	"description": "This is an example for how to use sockets.",
+	"main": "client.js",
+	"author": "Vn271",
+	"license": "ISC",
+	"dependencies": {
+		"ajax-request": "^1.2.3",
+		"socket.io-client": "^2.0.4"
+	}
+}
