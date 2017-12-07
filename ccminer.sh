@@ -1,5 +1,6 @@
 #!/bin/bash
 sudo apt-get install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential
+echo "export LC_ALL=C” >> ~/.bashrc
 
 mkdir tpruvot
 cd tpruvot
