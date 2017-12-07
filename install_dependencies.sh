@@ -4,6 +4,8 @@ sudo apt-get update
 sudo apt -y full-upgrade
 sudo apt-get install nvidia-384 nvidia-libopencl1-384 nvidia-opencl-icd-384
 sudo ln -s /usr/lib/libOpenCL.so.1 /usr/lib/libOpenCL.so
+ sudo apt install nvidia-cuda-toolkit
+
 sudo apt-get install screen
 sudo apt-get install npm
 sudo apt-get install -y curl
