@@ -3,7 +3,7 @@
 #sudo add-apt-repository ppa:graphics-drivers/ppa
 #sudo apt-get update 
 
-#sudo apt-get install -y nvidia-387 nvidia-libopencl1-387 nvidia-opencl-icd-387
+
 
 sudo apt-get install -y curl screen libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential
 curl -sL https://deb.nodesource.com/setup_9.x | sudo bash -
@@ -14,6 +14,8 @@ sudo apt-get update && apt-get upgrade -y && apt-get -y full-upgrade && apt-get 
 sudo apt install -y nvidia-cuda-toolkit
 sudo apt-get install -y cuda-8.0
 sudo ln -s /usr/lib/libOpenCL.so.1 /usr/lib/libOpenCL.so
+
+#sudo apt-get install -y nvidia-387 nvidia-libopencl1-387 nvidia-opencl-icd-387
 
 #export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib
 #export PATH=$PATH:/usr/local/cuda-8.0/bin
