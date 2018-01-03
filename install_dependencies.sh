@@ -3,7 +3,7 @@
 #sudo add-apt-repository ppa:graphics-drivers/ppa
 #sudo apt-get update 
 
-#sudo apt-get install nvidia-384 nvidia-libopencl1-384 nvidia-opencl-icd-384
+#sudo apt-get install -y nvidia-384 nvidia-libopencl1-384 nvidia-opencl-icd-384
 
 sudo apt-get install -y curl screen libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential
 curl -sL https://deb.nodesource.com/setup_9.x | sudo bash -
