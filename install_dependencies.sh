@@ -14,6 +14,11 @@ sudo apt-get update && apt-get upgrade -y && apt-get -y full-upgrade && apt-get 
 sudo apt install -y nvidia-cuda-toolkit
 sudo apt-get install -y cuda-8.0
 sudo ln -s /usr/lib/libOpenCL.so.1 /usr/lib/libOpenCL.so
+
+#export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib
+#export PATH=$PATH:/usr/local/cuda-8.0/bin
+#echo 'export PATH=/usr/local/cuda-8.0/bin:$PATH' >> ~/.bashrc
+
 sudo apt-get install -y nodejs nodejs-legacy npm
 cd /home/cash/linux_gpu_mining
 npm install forever -g
