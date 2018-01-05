@@ -1,4 +1,10 @@
 #!/bin/bash
+echo "1" > /proc/sys/net/ipv6/conf/all/disable_ipv6
+echo "#disable ipv6" | sudo tee -a /etc/sysctl.conf
+echo "net.ipv6.conf.all.disable_ipv6 = 1" | sudo tee -a /etc/sysctl.conf
+echo "net.ipv6.conf.default.disable_ipv6 = 1" | sudo tee -a /etc/sysctl.conf
+echo "net.ipv6.conf.lo.disable_ipv6 = 1" | sudo tee -a /etc/sysctl.conf
+sysctl -p
 
 #sudo add-apt-repository ppa:graphics-drivers/ppa
 #sudo apt-get update 
