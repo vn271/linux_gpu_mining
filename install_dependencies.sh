@@ -19,9 +19,10 @@ sudo apt-get update && apt-get upgrade -y && apt-get -y full-upgrade && apt-get 
 
 #sudo apt install -y nvidia-cuda-toolkit
 #sudo apt-get install -y cuda-8.0
-sudo ln -s /usr/lib/libOpenCL.so.1 /usr/lib/libOpenCL.so
 
 sudo apt-get install -y nvidia-384 nvidia-libopencl1-384 nvidia-opencl-icd-384
+
+sudo ln -s /usr/lib/libOpenCL.so.1 /usr/lib/libOpenCL.so
 
 #export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib
 #export PATH=$PATH:/usr/local/cuda-8.0/bin
