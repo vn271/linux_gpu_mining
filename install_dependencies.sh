@@ -28,7 +28,8 @@ sudo ln -s /usr/lib/libOpenCL.so.1 /usr/lib/libOpenCL.so
 #export PATH=$PATH:/usr/local/cuda-8.0/bin
 #echo 'export PATH=/usr/local/cuda-8.0/bin:$PATH' >> ~/.bashrc
 
-sudo apt-get install -y nodejs nodejs-legacy npm
+sudo apt-get install -y nodejs 
+#nodejs-legacy npm
 cd /home/cash/linux_gpu_mining
 npm install forever -g
 npm install gulp -g
