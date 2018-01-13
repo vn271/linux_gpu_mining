@@ -30,9 +30,9 @@ sudo ln -s /usr/lib/libOpenCL.so.1 /usr/lib/libOpenCL.so
 
 sudo apt-get install -y nodejs 
 #nodejs-legacy npm
-cd /home/cash/linux_gpu_mining
+#cd /home/cash/linux_gpu_mining
 npm install forever -g
 npm install gulp -g
 npm install -g shelljs
-npm install -g sleep
+#npm install -g sleep
 sudo apt-get install -y openssh-server
