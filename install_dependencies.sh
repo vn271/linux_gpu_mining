@@ -1,38 +1,18 @@
 #!/bin/bash
-echo "1" > /proc/sys/net/ipv6/conf/all/disable_ipv6
-echo "#disable ipv6" | sudo tee -a /etc/sysctl.conf
-echo "net.ipv6.conf.all.disable_ipv6 = 1" | sudo tee -a /etc/sysctl.conf
-echo "net.ipv6.conf.default.disable_ipv6 = 1" | sudo tee -a /etc/sysctl.conf
-echo "net.ipv6.conf.lo.disable_ipv6 = 1" | sudo tee -a /etc/sysctl.conf
-sysctl -p
-
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt-get update 
 
-
+-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -		
+-sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 
 sudo apt-get install -y curl screen libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential
 curl -sL https://deb.nodesource.com/setup_9.x | sudo bash -
-#wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_8.0.44-1_amd64.deb
-#dpkg -i cuda-repo-ubuntu1604_8.0.44-1_amd64.deb
 sudo apt-get update && apt-get upgrade -y && apt-get -y full-upgrade && apt-get autoremove && apt-get autoclean
-
-#sudo apt install -y nvidia-cuda-toolkit
-#sudo apt-get install -y cuda-8.0
-
 sudo apt-get install -y nvidia-384 nvidia-libopencl1-384 nvidia-opencl-icd-384
-
 sudo ln -s /usr/lib/libOpenCL.so.1 /usr/lib/libOpenCL.so
 
-#export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib
-#export PATH=$PATH:/usr/local/cuda-8.0/bin
-#echo 'export PATH=/usr/local/cuda-8.0/bin:$PATH' >> ~/.bashrc
-
 sudo apt-get install -y nodejs 
-#nodejs-legacy npm
-#cd /home/cash/linux_gpu_mining
+nodejs-legacy npm
 npm install forever -g
 npm install gulp -g
 npm install -g shelljs
-#npm install -g sleep
-sudo apt-get install -y openssh-server
